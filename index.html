@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- css links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Bootstrap Components</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          
+          <h3>Tooltip Example</h3>
+          <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+          
+           <p>The data-placement attribute specifies the tooltip position.</p>
+            <ul class="list-inline">
+              <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+              <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+            </ul>
+  
+          <h3>Popover Example</h3>
+          <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+          <a href="#" title="Header" data-toggle="popover" data-trigger="hover" data-content="Some content">Hover over me</a>
+          
+          <h3>Toast Example</h3>
+          <p>A toast is like an alert box that is only shown for a couple of seconds when something happens (i.e. when a user clicks on a button, submits a form, etc.).</p>
+          <p>In this example, we use a button to show the toast message.</p>
+         
+          <button type="button" class="btn btn-primary" id="myBtn">Show Toast</button>
+
+          <div class="toast">
+            <div class="toast-header">
+              Toast Header
+            </div>
+            <div class="toast-body">
+              Some text inside the toast body
+            </div>
+          </div>
+
+          <p>In this example, we use data-autohide="false" to show the toast by default. You can close it by clicking on the close (x) icon inside the toast header.</p>
+          <div class="toast" data-autohide="false">
+            <div class="toast-header">
+              <strong class="mr-auto text-primary">Toast Header</strong>
+              <small class="text-muted">5 mins ago</small>
+              <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+            </div>
+            <div class="toast-body">
+              Some text inside the toast body
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- jQuery links -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+          $('[data-toggle="popover"]').popover();   
+      });
+    </script>
+    <script>
+    $(document).ready(function(){
+      $("#myBtn").click(function(){
+        $('.toast').toast('show');
+      });
+    });
+    </script>
+    <script>
+    $(document).ready(function(){
+      $('.toast').toast('show');
+    });
+    </script>     
+
+  </body>
+</html>
